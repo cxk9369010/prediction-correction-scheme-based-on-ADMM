@@ -1,6 +1,6 @@
 function [z, historz] = lasso_PCSALM(A, b,eig_AA,paras)
-%%%   Xiaokai. Chang �� Sanyang. Liu �� Zhao Deng,
-%%%   A prediction-correction scheme based on Lagrange multiplier
+%%%   Xiaokai. Chang · Sanyang. Liu · Zhao Deng,
+%%%   A prediction-correction scheme based on  the augmented Lagrangian method
 %%%   with indefinite proximal regularization for separable convex programming
 
 
@@ -44,7 +44,7 @@ for k = 1:MAX_ITER
 
     
    %% u-update
-    u = u -  rho*(x - A*z);% SADMM中第�?��multiplier的parameter等于alpha
+    u = u -  rho*(x - A*z);% SADMM涓涓?釜multiplier鐨刾arameter绛変簬alpha
     
    %% z-update 
     q=-A' * (u-rho*(x-A*z));
