@@ -8,8 +8,8 @@ mm = 150;       % number of examples
 nn = 500;       % number of features
 % pp = 100/n;      % sparsity density
 dimension=5;
-paras.abstol = 1e-4;
-paras.reltol = 1e-2;
+paras.abstol = 1e-6;
+paras.reltol = 1e-4;
 
 aa=[];
 alpha= 0;
@@ -38,7 +38,7 @@ for ii=1:dimension
     paras.rho = 1;   %%  penalty factor 
     paras.lambda = lambda;  %% objective parameter
     paras.step = 1.8;   %% for the correction step of PCSLM 
-    paras.tau = 0.5;    %% for the prediction step of PCSLM 
+    paras.tau = 0.25;    %% for the prediction step of PCSLM 
     
     [x2 history2] = lasso_PCSALM(A, b, eig_AA,paras);
 
